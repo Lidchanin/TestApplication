@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="facebook_app_id">1748783348706697</string>
+    <string name="fb_login_protocol_scheme">fbAPP_ID</string>
+    <string name="fb_profile_name">ProfileName</string>
+    <string name="fb_profile_birthday">ProfileBirthday</string>
+</resources>
