@@ -4,4 +4,6 @@
     <string name="fb_login_protocol_scheme">fbAPP_ID</string>
     <string name="fb_profile_name">ProfileName</string>
     <string name="fb_profile_birthday">ProfileBirthday</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="gooble_maps_button">Maps</string>
 </resources>

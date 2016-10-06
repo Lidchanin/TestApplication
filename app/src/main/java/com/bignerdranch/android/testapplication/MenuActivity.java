@@ -66,5 +66,8 @@ public class MenuActivity extends AppCompatActivity {
 
 
     }
-
+    public void mapsButton(View view) {
+        Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
+        startActivity(intent);
+    }
 }
