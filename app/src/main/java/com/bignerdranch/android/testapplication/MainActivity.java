@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         callbackManager = CallbackManager.Factory.create();
-        //for autologin
         LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override

@@ -2,6 +2,7 @@ package com.bignerdranch.android.testapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -21,6 +22,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -89,6 +92,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        new CountDownTimer(300000, 1000) {
+            public void onTick(long millisUntilFinished) {
+            }
+            public void onFinish() {
+                Toast.makeText(getApplicationContext(),"Was updated",Toast.LENGTH_LONG).show();
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+                start();
+            }
+        }.start();
     }
 
     public void manualUpdateButton(View view) {

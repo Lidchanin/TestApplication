@@ -15,6 +15,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MarkerActivity extends AppCompatActivity {
     private String message;
     private String image;
