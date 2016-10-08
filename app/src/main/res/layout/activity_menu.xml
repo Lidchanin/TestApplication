@@ -45,12 +45,11 @@
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="OnClickLogFB"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:text="@string/gooble_maps_button"
+        android:text="@string/google_maps_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shareButton"
