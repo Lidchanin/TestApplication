@@ -5,4 +5,11 @@
           android:name="com.google.android.gms.maps.SupportMapFragment"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          tools:context="com.bignerdranch.android.testapplication.MapsActivity"/>
+          tools:context="com.bignerdranch.android.testapplication.MapsActivity">
+            <Button
+            android:onClick="manualUpdateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/manualUpdateButton"
+            android:text="@string/manual_update_button"/>
+</fragment>

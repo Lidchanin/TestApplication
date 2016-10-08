@@ -3,6 +3,8 @@ package com.bignerdranch.android.testapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
@@ -62,7 +64,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     latitude[i] = location.optDouble("latitude");
                                     longitude[i] = location.optDouble("longitude");
                                     LatLng markerPosition = new LatLng(latitude[i], longitude[i]);
-                                    //for markerHashMap
                                     Marker currentMarker = mMap.addMarker(new MarkerOptions().position(markerPosition).draggable(false));
                                     markerHashMap.put(currentMarker, i);
                                 }
@@ -90,4 +91,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    public void manualUpdateButton(View view) {
+        //update
+        Toast.makeText(this, "Your data was update", Toast.LENGTH_SHORT).show();
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
 }

@@ -31,15 +31,6 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/fbimg"
         android:layout_toEndOf="@+id/fbimg"/>
-    <TextView
-        android:text="@string/fb_profile_birthday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/profileBirthdayTextView"
-        android:layout_alignBottom="@+id/fbimg"
-        android:layout_alignLeft="@+id/profileNameTextView"
-        android:layout_alignStart="@+id/profileNameTextView"
-        android:layout_marginBottom="19dp"/>
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
@@ -48,22 +39,32 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:text="@string/google_maps_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/shareButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:id="@+id/mapsButton"
-        android:onClick="mapsButton"/>
-
     <com.facebook.share.widget.ShareButton
         android:id="@+id/shareButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="97dp"
         android:layout_below="@+id/profileBirthdayTextView"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="@string/fb_profile_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileBirthdayTextView"
+        android:layout_marginBottom="20dp"
+        android:layout_alignBottom="@+id/fbimg"
+        android:layout_alignLeft="@+id/profileNameTextView"
+        android:layout_alignStart="@+id/profileNameTextView"/>
+
+    <Button
+        android:text="@string/google_maps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/mapsButton"
+        android:onClick="mapsButton"
+        android:layout_below="@+id/shareButton"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

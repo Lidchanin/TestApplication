@@ -11,4 +11,5 @@
     <string name="post_message_text_view_content_description">Post message text</string>
     <string name="post_created_time_text_view">PostCreatedTime</string>
     <string name="post_created_time_text_view_content_description">Post created time </string>
+    <string name="manual_update_button">Manual update</string>
 </resources>

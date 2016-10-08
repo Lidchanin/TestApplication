@@ -49,13 +49,12 @@ public class MenuActivity extends AppCompatActivity {
         request.setParameters(parameters);
         request.executeAsync();
 
-        //facebook Share(without added foto,video)
+        //facebook Share(without added image,video for post)
         ShareLinkContent content = new ShareLinkContent.Builder()
                 .setContentUrl(Uri.parse("https://developers.facebook.com"))
                 .build();
         ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
         shareButton.setShareContent(content);
-
 
     }
 
@@ -63,4 +62,5 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
         startActivity(intent);
     }
+
 }

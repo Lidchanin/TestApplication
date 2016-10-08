@@ -15,12 +15,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
 public class MarkerActivity extends AppCompatActivity {
     private String message;
     private String image;
@@ -67,6 +61,7 @@ public class MarkerActivity extends AppCompatActivity {
                             if (data.getJSONObject(position).has("created_time")) {
                                 createdTime = temp.optString("created_time");
                                 TextView createdTimeTV = (TextView) findViewById(R.id.createdTimeTextView);
+                                //Разобраться с выводом даты в нормальном виде(split("T") работает некорректно)
                                 createdTimeTV.setText(String.valueOf(createdTime));
                             }
                         } catch (JSONException e) {
