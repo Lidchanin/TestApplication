@@ -14,37 +14,37 @@
 
 
     <TextView
-        android:text="@string/post_message_text_view"
+        android:id="@+id/postMessageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="19dp"
         android:layout_marginStart="19dp"
-        android:id="@+id/postMessageTextView"
         android:layout_marginTop="46dp"
         android:contentDescription="@string/post_message_text_view_content_description"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:text="@string/post_message_text_view"/>
 
     <ImageView
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cast_ic_notification_stop_live_stream"
-        android:layout_marginTop="25dp"
         android:id="@+id/postImageView"
-        android:layout_below="@+id/postMessageTextView"
-        android:layout_alignLeft="@+id/postMessageTextView"
-        android:layout_alignStart="@+id/postMessageTextView"
-        android:contentDescription="@string/post_image_image_view_content_description"
-        android:layout_width="wrap_content"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/postImageView"
+        android:layout_alignLeft="@+id/postMessageTextView"
+        android:layout_alignStart="@+id/postMessageTextView"
+        android:layout_below="@+id/postMessageTextView"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/post_image_image_view_content_description"
+        app:srcCompat="@drawable/cast_ic_notification_stop_live_stream"/>
+
+    <TextView
+        android:id="@+id/createdTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/postImageView"
         android:layout_alignStart="@+id/postImageView"
+        android:layout_below="@+id/postImageView"
         android:layout_marginTop="25dp"
-        android:id="@+id/createdTimeTextView"
-        android:text="@string/post_created_time_text_view"
-        android:contentDescription="@string/post_created_time_text_view_content_description"/>
+        android:contentDescription="@string/post_created_time_text_view_content_description"
+        android:text="@string/post_created_time_text_view"/>
 </RelativeLayout>
