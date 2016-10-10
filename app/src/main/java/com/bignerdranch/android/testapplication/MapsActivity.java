@@ -22,8 +22,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -96,7 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onTick(long millisUntilFinished) {
             }
             public void onFinish() {
-                Toast.makeText(getApplicationContext(),"Was updated",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Your data was updated(auto)", Toast.LENGTH_LONG).show();
                 Intent intent = getIntent();
                 finish();
                 startActivity(intent);

@@ -22,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        getSupportActionBar().hide();
         //get profile data
         GraphRequest request = GraphRequest.newGraphPathRequest(
                 AccessToken.getCurrentAccessToken(),
@@ -41,7 +42,10 @@ public class MenuActivity extends AppCompatActivity {
                         //birthday
                         String birthday = resp.optString("birthday");
                         TextView birthdayTextView = (TextView) findViewById(R.id.profileBirthdayTextView);
-                        birthdayTextView.setText(String.valueOf(birthday));
+                        String[] tempArr = new String[3];
+                        tempArr = String.valueOf(birthday).split("/");
+                        //birthdayTextView.setText(String.valueOf(birthday));
+                        birthdayTextView.setText(tempArr[1] + " " + tempArr[0] + " " + tempArr[2]);
                     }
                 });
         Bundle parameters = new Bundle();
@@ -62,5 +66,9 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
         startActivity(intent);
     }
-
+/*
+    public void postsButton(View view) {
+        Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
+        startActivity(intent);
+    }*/
 }
