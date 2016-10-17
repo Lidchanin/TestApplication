@@ -1,6 +1,6 @@
 package com.bignerdranch.android.testapplication.posts.adapter;
 
-/*
+/**
  * Created by Lidchanin on 17.10.2016.
  */
 
@@ -35,17 +35,18 @@ public class ThreeHorizontalTextViewsAdapter extends ArrayAdapter<ThreeStrings> 
         }
         ThreeStrings threeStrings = getItem(position);
         if (threeStrings != null) {
-            TextView leftTextView = (TextView) view.findViewById(R.id.leftTextView);
-            TextView rightTextView = (TextView) view.findViewById(R.id.rightTextView);
-            TextView centreTextView = (TextView) view.findViewById(R.id.centreTextView);
-            if (leftTextView != null) {
-                leftTextView.setText(threeStrings.getLeft());
+            TextView firstTextView = (TextView) view.findViewById(R.id.firstTextView);
+            TextView secondTextView = (TextView) view.findViewById(R.id.secondTextView);
+            TextView thirdTextView = (TextView) view.findViewById(R.id.thirdTextView);
+
+            if (firstTextView != null) {
+                firstTextView.setText(threeStrings.getFirst());
             }
-            if (rightTextView != null) {
-                rightTextView.setText(threeStrings.getRight());
+            if (secondTextView != null) {
+                secondTextView.setText(threeStrings.getSecond());
             }
-            if (centreTextView != null) {
-                centreTextView.setText(threeStrings.getCentre());
+            if (thirdTextView != null) {
+                thirdTextView.setText(threeStrings.getThird());
             }
         }
         return view;

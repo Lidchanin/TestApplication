@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bignerdranch.android.testapplication.maps.MapsActivity;
+import com.bignerdranch.android.testapplication.posts.activity.PostsActivity;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
@@ -16,7 +18,7 @@ import com.facebook.share.widget.ShareButton;
 
 import org.json.JSONObject;
 
-public class MenuActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +65,12 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void mapsButton(View view) {
-        Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
         startActivity(intent);
     }
 
     public void postsButton(View view) {
-        Intent intent = new Intent(MenuActivity.this, PostsActivity.class);
+        Intent intent = new Intent(LoginActivity.this, PostsActivity.class);
         startActivity(intent);
     }
 }

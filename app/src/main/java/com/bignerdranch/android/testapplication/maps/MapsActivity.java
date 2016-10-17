@@ -1,4 +1,4 @@
-package com.bignerdranch.android.testapplication;
+package com.bignerdranch.android.testapplication.maps;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.bignerdranch.android.testapplication.R;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;

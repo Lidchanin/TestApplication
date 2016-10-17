@@ -1,30 +1,30 @@
 package com.bignerdranch.android.testapplication.posts.adapter;
 
-/*
+/**
  * Created by Lidchanin on 17.10.2016.
  */
 
 public class ThreeStrings {
-    private String left;
-    private String right;
-    private String centre;
+    private String first;
+    private String second;
+    private String third;
 
-    String getLeft() {
-        return left;
+    String getFirst() {
+        return first;
     }
 
-    String getRight() {
-        return right;
+    String getSecond() {
+        return second;
     }
 
-    String getCentre() {
-        return centre;
+    String getThird() {
+        return third;
     }
 
-    public ThreeStrings(String left, String right, String centre) {
-        this.left = left;
-        this.right = right;
-        this.centre = centre;
+    public ThreeStrings(String first, String second, String third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
     }
 
 }

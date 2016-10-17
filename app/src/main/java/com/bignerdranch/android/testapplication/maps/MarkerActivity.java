@@ -1,4 +1,4 @@
-package com.bignerdranch.android.testapplication;
+package com.bignerdranch.android.testapplication.maps;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bignerdranch.android.testapplication.ImageDownloader;
+import com.bignerdranch.android.testapplication.R;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
@@ -14,9 +16,6 @@ import com.facebook.GraphResponse;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MarkerActivity extends AppCompatActivity {
     private String message;
