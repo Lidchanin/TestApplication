@@ -5,7 +5,7 @@
     android:id="@+id/activity_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bignerdranch.android.testapplication.LoginActivity">
+    tools:context="com.bignerdranch.android.testapplication.MenuActivity">
 
     <FrameLayout
         android:layout_marginTop="@dimen/bar_height"
@@ -82,7 +82,9 @@
             android:layout_gravity="center|top"
             android:onClick="mapsButton"
             android:text="@string/google_maps_button"
-            android:layout_marginTop="@dimen/bar_height"/>
+            android:layout_marginTop="@dimen/bar_height"
+            android:background="@drawable/mybutton"
+            android:textColor="#FFFFFF"/>
 
         <Button
             android:id="@+id/postsButton"
@@ -90,8 +92,10 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center|top"
-            android:layout_marginTop="104dp"
-            android:onClick="postsButton"/>
+            android:layout_marginTop="114dp"
+            android:onClick="postsButton"
+            android:background="@drawable/mybutton"
+            android:textColor="#FFFFFF"/>
 
         <com.facebook.share.widget.ShareButton
             android:id="@+id/shareButton"

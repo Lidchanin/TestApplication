@@ -15,6 +15,6 @@
         android:layout_margin="5dp"
         android:onClick="manualUpdateButton"
         android:background="@drawable/shape"
-        android:text="@string/manual_update_button"
-        />
+        android:text="@string/manual_update_button"/>
+
 </fragment>
