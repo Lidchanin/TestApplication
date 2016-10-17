@@ -14,4 +14,6 @@
     <string name="manual_update_button">Manual update</string>
     <string name="main_menu_text_view">Main menu</string>
     <string name="view_posts_button">All posts</string>
+    <string name="your_posts">Your posts</string>
+    <string name="empty">Is empty</string>
 </resources>

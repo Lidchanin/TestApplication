@@ -42,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
                         //birthday
                         String birthday = resp.optString("birthday");
                         TextView birthdayTextView = (TextView) findViewById(R.id.profileBirthdayTextView);
-                        String[] tempArr = new String[3];
+                        String[] tempArr;
                         tempArr = String.valueOf(birthday).split("/");
                         //birthdayTextView.setText(String.valueOf(birthday));
                         birthdayTextView.setText(tempArr[1] + " " + tempArr[0] + " " + tempArr[2]);
@@ -66,9 +66,9 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
         startActivity(intent);
     }
-/*
+
     public void postsButton(View view) {
-        Intent intent = new Intent(MenuActivity.this, MapsActivity.class);
+        Intent intent = new Intent(MenuActivity.this, PostsActivity.class);
         startActivity(intent);
-    }*/
+    }
 }

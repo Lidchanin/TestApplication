@@ -82,26 +82,25 @@
             android:layout_gravity="center|top"
             android:onClick="mapsButton"
             android:text="@string/google_maps_button"
-            android:layout_marginTop="@dimen/bar_height"
-            />
+            android:layout_marginTop="@dimen/bar_height"/>
+
+        <Button
+            android:id="@+id/postsButton"
+            android:text="@string/view_posts_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="104dp"
+            android:onClick="postsButton"/>
 
         <com.facebook.share.widget.ShareButton
             android:id="@+id/shareButton"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:width="150dp"
             android:layout_marginTop="@dimen/bar_height"
             android:layout_gravity="center|bottom"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginBottom="20dp"/>
 
-        <!--<Button
-            android:id="@+id/postsButton"
-            android:text="@string/view_posts_button"
-            android:layout_width="100dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginRight="250dp"
-            android:onClick="postsButton (MenuActivity)"/>-->
     </FrameLayout>
 </FrameLayout>

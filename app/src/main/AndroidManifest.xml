@@ -65,6 +65,8 @@
         </activity>
         <activity android:name=".MarkerActivity">
         </activity>
+        <activity android:name=".PostsActivity">
+        </activity>
     </application>
 
 </manifest>

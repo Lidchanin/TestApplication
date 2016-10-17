@@ -25,10 +25,10 @@ import java.util.HashMap;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    public int dataLen;
-    public double[] longitude;
-    public double[] latitude;
-    public HashMap<Marker, Integer> markerHashMap = new HashMap<>();
+    private int dataLen;
+    private double[] longitude;
+    private double[] latitude;
+    private HashMap<Marker, Integer> markerHashMap = new HashMap<>();
     private GoogleMap mMap;
 
     @Override
