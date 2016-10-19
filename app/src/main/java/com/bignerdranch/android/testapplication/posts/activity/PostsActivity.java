@@ -1,10 +1,14 @@
 package com.bignerdranch.android.testapplication.posts.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.bignerdranch.android.testapplication.R;
+import com.bignerdranch.android.testapplication.maps.MarkerActivity;
 import com.bignerdranch.android.testapplication.posts.adapter.ThreeHorizontalTextViewsAdapter;
 import com.bignerdranch.android.testapplication.posts.adapter.ThreeStrings;
 import com.facebook.AccessToken;
@@ -68,14 +72,14 @@ public class PostsActivity extends Activity {
                                         R.layout.three_horizontal_text_views_layout,
                                         threeStringsList);
                                 listView.setAdapter(threeHorizontalTextViewsAdapter);
-//                                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                                        currentPosition = position;
-//                                        Intent intent = new Intent(PostsActivity.this, .class);
-//                                        intent.putExtra("pos", currentPosition);
-//                                        startActivity(intent);
-//                                    }
-//                                });
+                                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                        currentPosition = position;
+                                        Intent intent = new Intent(PostsActivity.this, MarkerActivity.class);
+                                        intent.putExtra("position", currentPosition);
+                                        startActivity(intent);
+                                    }
+                                });
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
