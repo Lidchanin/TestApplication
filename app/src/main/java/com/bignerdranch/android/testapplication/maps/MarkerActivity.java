@@ -63,7 +63,7 @@ public class MarkerActivity extends AppCompatActivity {
                             if (data.getJSONObject(position).has("created_time")) {
                                 createdTime = temp.optString("created_time");
                                 TextView createdTimeTV = (TextView) findViewById(R.id.createdTimeTextView);
-                                //Разобраться с выводом даты в нормальном виде(split("T") работает некорректно)
+                                //TODO Разобраться с выводом даты в нормальном виде(split("T") работает некорректно)
                                 createdTimeTV.setText(String.valueOf(createdTime));
                             }
                         } catch (JSONException e) {

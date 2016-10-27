@@ -3,6 +3,11 @@ package com.bignerdranch.android.testapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Gravity;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -35,12 +40,16 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancel() {
-
+                System.out.println("onCancel");
             }
 
             @Override
             public void onError(FacebookException error) {
-
+                Log.d("Error", error.getMessage());
+                LinearLayout mainLayout = new LinearLayout(null);
+                PopupWindow popUpWindow = new PopupWindow();
+                popUpWindow.showAtLocation(mainLayout, Gravity.BOTTOM, 10, 10);
+                popUpWindow.update(50, 50, 320, 90);;
             }
         });
     }

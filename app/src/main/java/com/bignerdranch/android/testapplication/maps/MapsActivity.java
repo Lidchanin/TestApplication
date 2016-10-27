@@ -36,7 +36,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified, when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -92,8 +91,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         new CountDownTimer(300000, 1000) {
-            public void onTick(long millisUntilFinished) {
-            }
+            public void onTick(long millisUntilFinished) {}
+            //TODO Проблема с автообновлением
             public void onFinish() {
                 Toast.makeText(getApplicationContext(), "Your data was updated(auto)", Toast.LENGTH_LONG).show();
                 Intent intent = getIntent();
@@ -105,7 +104,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void manualUpdateButton(View view) {
-        //update
         Toast.makeText(this, "Your data was update", Toast.LENGTH_SHORT).show();
         Intent intent = getIntent();
         finish();
