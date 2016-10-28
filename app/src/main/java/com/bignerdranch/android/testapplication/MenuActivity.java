@@ -43,7 +43,9 @@ public class MenuActivity extends AppCompatActivity {
                             JSONObject data = picture.getJSONObject("data");
                             String urlSrc = data.optString("url");
                             ImageView imageIV = (ImageView) findViewById(R.id.profilePictureImageView);
-                            new ImageDownloader(imageIV).execute(urlSrc);
+                            //TODO download image
+//                            new ImageDownloader(imageIV).execute(urlSrc);
+                            ImageManager.fetchImage(urlSrc, imageIV);
                             String name = resp.optString("name");
                             TextView nameTextView = (TextView) findViewById(R.id.profileNameTextView);
                             nameTextView.setText(String.valueOf(name));

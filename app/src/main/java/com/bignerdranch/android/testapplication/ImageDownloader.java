@@ -3,6 +3,7 @@ package com.bignerdranch.android.testapplication;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.ImageView;
 
 import java.io.InputStream;
@@ -10,7 +11,7 @@ import java.io.InputStream;
 /**
  * Created by Lidchanin on 07.10.2016.
  */
-//class for added image in ImageView
+
 public class ImageDownloader extends AsyncTask<String, Void, Bitmap> {
     private ImageView bmImage;
 
@@ -24,7 +25,9 @@ public class ImageDownloader extends AsyncTask<String, Void, Bitmap> {
         try {
             InputStream in = new java.net.URL(url).openStream();
             mIcon = BitmapFactory.decodeStream(in);
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            Log.e("Error download: ", e.getMessage());
+            e.printStackTrace();
         }
         return mIcon;
     }
